@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: #013a63;
+  background-color: #012a4a;
 }
 
 
@@ -27,7 +27,7 @@ header {
 header .name-logo {
   color: white;
   font-weight: bold;
-  font-size: 28px;
+  font-size: 30px;
   text-decoration: none;
 }
 
@@ -39,13 +39,41 @@ header nav {
 }
 
 .navbar a {
-  font-size: 18px;
+  font-size: 20px;
   color: white;
   text-decoration: none;
   font-weight: 500;
 }
 
-.navbar-element:hover {
-  color: red;
+.navbar-element {
+  position: relative;
 }
 
+.navbar .active {
+  color: #48cae4;
+}
+
+.navbar-element:hover::after {
+  content: "";
+  position: absolute;
+  top: 22px;
+  left: 1px;
+  animation: line 10s;
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+/* .navbar-element:hover {
+  animation: line 1s linear infinite;
+} */
+
+@keyframes line {
+  0% {
+    width: 0;
+  }
+  10% {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+  }
+}
