@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: #012a4a;
+  background-color: #001233;
 }
 
 
@@ -62,10 +62,6 @@ header nav {
   border-bottom: 1px solid rgb(255, 255, 255);
 }
 
-/* .navbar-element:hover {
-  animation: line 1s linear infinite;
-} */
-
 @keyframes line {
   0% {
     width: 0;
@@ -76,4 +72,110 @@ header nav {
   100% {
     width: 100%;
   }
+}
+
+
+main {
+  margin-top: 220px;
+  padding: 20px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main .left {
+  width: 720px;
+}
+
+.left .passion {
+  color: #001233;
+  font-weight: bold;
+  position: relative;
+  display: inline-block; /* Ensure the element has a width */
+}
+
+.left .passion::after {
+  content: "Frontend Developer";
+  color: #4cc9f0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0; /* Start with 0 width */
+  animation: passion 4s linear infinite;
+  border-right: 2px solid rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+@keyframes passion {
+  0% {
+    width: 0;
+  }
+  35% {
+    width: 100%; /* Animate to full width */
+  }
+  65% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+.left h1,
+.left p {
+  color: white;
+}
+
+.left h1 {
+  margin-bottom: 2px;
+  font-size: 44px;
+}
+
+.left h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.left p {
+  line-height: 24px;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.primary-button {
+  color: #4cc9f0;
+  position: relative;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px 20px;
+  background-color: #001233;
+  border: 2px solid #4cc9f0;
+  border-radius: 10px;
+  z-index: 1;
+  cursor: pointer;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.primary-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  transition: .5s;
+  z-index: -1;
+}
+
+.primary-button:hover {
+  color: white;
+}
+
+.primary-button:hover::before {
+  width: 100%;
+  color: white;
+  background-color: #48cae4;
 }
