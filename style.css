@@ -11,6 +11,61 @@ body {
   background-color: #001233;
 }
 
+/* theme */
+
+:root {
+  --main-color: #fff;
+  --supporting-color: #48cae4;
+  --font-color: #424242;
+  /* --bg-color: #ffffff; */
+  --bg-color: #001233;
+  --heading-color: #000a19;
+  --hero-heading-color: #003b99;
+  --white-color: #ffffff;
+  --para-color: #504e4d;
+  --bnt-hover-bg-color: #003b99;
+  --btn-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  --footer-bg-color: #040d12;
+}
+
+
+/* layout */
+
+.container {
+  max-width: 142rem;
+  margin: 0 auto;
+  padding: 9.6rem 2.4rem;
+}
+
+/* .section-why--choose .container:first-child,
+.section-about .container:first-child,
+.section-blog .container:first-child,
+.section-course .container:first-child,
+.section-contact--homepage .container:first-child
+.section-contact .container:first-child {
+  padding: 6.4rem 0 2.4rem 0;
+} */
+
+:is(.section-why--choose, .section-about, .section-blog, .section-course, .section-contact--homepage, .section-contact) .container:first-child{
+  padding: 6.4rem 0 2.4rem 0;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-two--cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-three--cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-four--cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 
 header {
   background-color: transparent;
@@ -25,7 +80,7 @@ header {
 }
 
 header .name-logo {
-  color: white;
+  color: var(--main-color);
   font-weight: bold;
   font-size: 30px;
   text-decoration: none;
@@ -40,7 +95,7 @@ header nav {
 
 .navbar a {
   font-size: 20px;
-  color: white;
+  color: var(--main-color);
   text-decoration: none;
   font-weight: 500;
 }
@@ -59,7 +114,7 @@ header nav {
   top: 22px;
   left: 1px;
   animation: line 10s;
-  border-bottom: 1px solid rgb(255, 255, 255);
+  border-bottom: 1px solid var(--main-color);
 }
 
 @keyframes line {
@@ -76,34 +131,34 @@ header nav {
 
 
 main {
-  margin-top: 220px;
+  margin-top: 200px;
   padding: 20px 10%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-main .left {
+main .introduction {
   width: 720px;
 }
 
-.left .passion {
-  color: #001233;
+.introduction .passion {
+  color: var(--bg-color);
   font-weight: bold;
   position: relative;
   display: inline-block; /* Ensure the element has a width */
 }
 
-.left .passion::after {
+.introduction .passion::after {
   content: "Frontend Developer";
-  color: #4cc9f0;
+  color: var(--supporting-color);
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 0; /* Start with 0 width */
   animation: passion 4s linear infinite;
-  border-right: 2px solid rgb(255, 255, 255);
+  border-right: 2px solid var(--main-color);
   overflow: hidden;
   white-space: nowrap; /* Prevent text from wrapping */
 }
@@ -123,35 +178,36 @@ main .left {
   }
 }
 
-.left h1,
+.introduction h1,
 .left p {
-  color: white;
+  color: var(--main-color);
 }
 
-.left h1 {
+.introduction h1 {
   margin-bottom: 2px;
   font-size: 44px;
 }
 
-.left h2 {
+.introduction h2 {
   font-size: 36px;
   margin-bottom: 20px;
 }
 
-.left p {
+.introduction p {
+  color: var(--main-color);
   line-height: 24px;
   font-size: 20px;
   margin-bottom: 30px;
 }
 
 .primary-button {
-  color: #4cc9f0;
+  color: var(--supporting-color);
   position: relative;
   font-size: 24px;
   font-weight: bold;
   padding: 10px 20px;
-  background-color: #001233;
-  border: 2px solid #4cc9f0;
+  background-color: var(--bg-color);
+  border: 2px solid var(--supporting-color);
   border-radius: 10px;
   z-index: 1;
   cursor: pointer;
@@ -176,6 +232,50 @@ main .left {
 
 .primary-button:hover::before {
   width: 100%;
-  color: white;
-  background-color: #48cae4;
+  color: var(--main-color);
+  background-color: var(--supporting-color);
 }
+
+.image-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.image-container::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(to right, var(--bg-color) 70%, var(--main-color));
+  width: 330px;
+  height: 330px;
+  border-radius: 50%;
+  animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+img:hover {
+  transform: scale(1.07);
+}
+
