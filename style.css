@@ -265,7 +265,7 @@ main .introduction {
   }
 }
 
-img {
+.my-image {
   width: 300px;
   height: 300px;
   object-fit: cover;
@@ -275,7 +275,106 @@ img {
   z-index: 2;
 }
 
-img:hover {
+.my-image:hover {
   transform: scale(1.07);
 }
 
+
+
+/* Skills Section */
+
+.title-heading {
+  display: block;
+  color: var(--white-color);
+  font-size: 2.5rem;
+  animation: color 2.5s linear infinite alternate;
+}
+
+@keyframes color {
+  from {
+    color: var(--supporting-color);
+  }
+  to {
+    color: var(--white-color);
+  }
+}
+
+.grid-system {
+  gap: 7rem;
+  margin: 0 auto;
+  max-width: 142rem;
+  margin-top: 3rem;
+}
+
+.hndivs {
+  margin-top: 9rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+
+.sections-title {
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20rem;
+  height: 22rem;
+}
+
+.sections {
+  position: relative;
+  width: 100%;
+  height: 23rem;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 2rem;
+  animation: border 2.5s linear infinite alternate;
+  transition: all linear 0.2s;
+}
+
+@keyframes border {
+  from {
+    box-shadow: none; 
+  }
+  to {
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 54px 55px, rgba(255, 255, 255, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
+  }
+}
+
+.sections:hover {
+  transform: scale(1.05);
+}
+
+/* Image styling */
+.sections img {
+  width: 100%;
+  object-fit: cover;
+  height: 23rem; 
+  display: block;
+  border-radius: 2rem;
+}
+
+/* Overlay styling */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+}
+
+/* Text styling */
+.overlay h3 {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0;
+}
