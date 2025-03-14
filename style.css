@@ -378,3 +378,23 @@ main .introduction {
   text-align: center;
   margin: 0;
 }
+
+
+
+
+
+/* About me Page */
+
+.about-me {
+  width: 840px;
+}
+
+.about-me p {
+  color: white;
+  font-size: 17px;
+  margin-top: 2rem;
+}
+
+.about-head {
+  font-size: 20px;
+}
