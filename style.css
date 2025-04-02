@@ -11,6 +11,10 @@ body {
   background-color: #001233;
 }
 
+html {
+  font-size: 56.25%;
+}
+
 /* theme */
 
 :root {
@@ -77,12 +81,13 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 1;
 }
 
 header .name-logo {
   color: var(--main-color);
   font-weight: bold;
-  font-size: 30px;
+  font-size: 3.333rem;
   text-decoration: none;
 }
 
@@ -94,7 +99,7 @@ header nav {
 }
 
 .navbar a {
-  font-size: 20px;
+  font-size: 2.22rem;
   color: var(--main-color);
   text-decoration: none;
   font-weight: 500;
@@ -111,10 +116,10 @@ header nav {
 .navbar-element:hover::after {
   content: "";
   position: absolute;
-  top: 22px;
-  left: 1px;
+  top: 2.44rem;
+  left: 0.11rem;
   animation: line 10s;
-  border-bottom: 1px solid var(--main-color);
+  border-bottom: 0.11rem solid var(--main-color);
 }
 
 @keyframes line {
@@ -131,15 +136,16 @@ header nav {
 
 
 main {
-  margin-top: 200px;
-  padding: 20px 10%;
+  margin-top: 22.22rem;
+  padding: 2.22rem 10%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 main .introduction {
-  width: 720px;
+  width: 80rem;
+  margin-right: 5rem;
 }
 
 .introduction .passion {
@@ -158,7 +164,7 @@ main .introduction {
   height: 100%;
   width: 0; /* Start with 0 width */
   animation: passion 4s linear infinite;
-  border-right: 2px solid var(--main-color);
+  border-right: 0.222rem solid var(--main-color);
   overflow: hidden;
   white-space: nowrap; /* Prevent text from wrapping */
 }
@@ -184,31 +190,32 @@ main .introduction {
 }
 
 .introduction h1 {
-  margin-bottom: 2px;
-  font-size: 44px;
+  margin-bottom: 0.222rem;
+  font-size: 4.889rem;
 }
 
 .introduction h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
+  font-size: 4rem;
+  margin-bottom: 2.22rem;
 }
 
 .introduction p {
   color: var(--main-color);
-  line-height: 24px;
-  font-size: 20px;
-  margin-bottom: 30px;
+  line-height: 2.667rem;
+  font-size: 2.22rem;
+  margin-bottom: 3.333rem;
 }
 
 .primary-button {
+  text-decoration: none;
   color: var(--supporting-color);
   position: relative;
-  font-size: 24px;
+  font-size: 2.667rem;
   font-weight: bold;
-  padding: 10px 20px;
+  padding: 1.111rem 2.22rem;
   background-color: var(--bg-color);
-  border: 2px solid var(--supporting-color);
-  border-radius: 10px;
+  border: 0.22rem solid var(--supporting-color);
+  border-radius: 1.11rem;
   z-index: 1;
   cursor: pointer;
   overflow: hidden;
@@ -238,8 +245,8 @@ main .introduction {
 
 .image-container {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 33.33rem;
+  height: 33.33rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -250,8 +257,8 @@ main .introduction {
   content: "";
   position: absolute;
   background: linear-gradient(to right, var(--bg-color) 70%, var(--main-color));
-  width: 330px;
-  height: 330px;
+  width: 36.366rem;
+  height: 36.366rem;
   border-radius: 50%;
   animation: rotate 5s linear infinite;
 }
@@ -266,8 +273,8 @@ main .introduction {
 }
 
 .my-image {
-  width: 300px;
-  height: 300px;
+  width: 33.33rem;
+  height: 33.33rem;
   object-fit: cover;
   object-position: top;
   border-radius: 50%;
@@ -286,7 +293,9 @@ main .introduction {
 .title-heading {
   display: block;
   color: var(--white-color);
-  font-size: 2.5rem;
+  font-size: 4rem;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
   animation: color 2.5s linear infinite alternate;
 }
 
@@ -301,34 +310,23 @@ main .introduction {
 
 .grid-system {
   gap: 7rem;
-  margin: 0 auto;
-  max-width: 142rem;
+  width: auto;
+  margin: 0;
   margin-top: 3rem;
 }
 
 .hndivs {
+  z-index: -1;
   margin-top: 9rem;
   display: flex;
   flex-direction: column;
   margin-bottom: 0;
 }
 
-
-.sections-title {
-  border-radius: 20px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 20rem;
-  height: 22rem;
-}
-
 .sections {
   position: relative;
-  width: 100%;
-  height: 23rem;
-  max-width: 800px;
+  width: 40rem;
+  height: 40rem;
   margin: 0 auto;
   border-radius: 2rem;
   animation: border 2.5s linear infinite alternate;
@@ -352,7 +350,7 @@ main .introduction {
 .sections img {
   width: 100%;
   object-fit: cover;
-  height: 23rem; 
+  height: 40rem; 
   display: block;
   border-radius: 2rem;
 }
@@ -374,7 +372,7 @@ main .introduction {
 /* Text styling */
 .overlay h3 {
   color: white;
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
   margin: 0;
 }
@@ -385,18 +383,25 @@ main .introduction {
 
 /* About me Page */
 
+.contact-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .about-me {
   width: 840px;
+  margin-left: 5rem;
 }
 
 .about-me p {
   color: white;
-  font-size: 17px;
+  font-size: 1.889rem;
   margin-top: 2rem;
 }
 
 .about-head {
-  font-size: 20px;
+  font-size: 2.22rem;
 }
 
 
@@ -414,7 +419,7 @@ main .introduction {
 .social-img {
   width: 100%;
   object-fit: cover;
-  height: 23rem; 
+  height: 40rem; 
   display: block;
   border-radius: 2rem;
 }
@@ -422,9 +427,9 @@ main .introduction {
 
 .contact-section {
   position: relative;
-  width: 100%;
-  height: 23rem;
-  max-width: 800px;
+  width: 40rem;
+  height: 40rem;
+  max-width: 88.889rem;
   margin: 0 auto;
   border-radius: 2rem;
   transition: all linear 0.2s;
@@ -450,7 +455,7 @@ main .introduction {
 
 .contact-head-div h3 {
   color: white;
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
   margin: 0;
 }
@@ -483,5 +488,117 @@ main .introduction {
   }
   to {
     --angle: 360deg;
+  }
+}
+
+
+
+
+
+/* Responsive */
+
+@media (width <= 1400px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+
+
+
+@media (width <= 1220px) {
+  html {
+    font-size: 50%;
+  }
+  
+  main {
+    margin-top: 28rem;
+  }
+
+  .sections {
+    width: 30rem;
+    height: 30rem;
+
+    & img {
+      height: 30rem;
+    }
+  }
+
+  .contact-main {
+    margin-top: 20rem;
+  }
+}
+
+
+
+
+@media (width <= 992px) {
+  html {
+    font-size: 46%;
+  }
+
+  main {
+    margin-top: 32rem;
+  }
+}
+
+
+
+
+@media (width <= 768px) {
+  html {
+    font-size: 40%;
+  }
+
+  main {
+    margin-top: 36rem;
+    display: grid;
+
+    & .introduction {
+      order: 2;
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    & .image-container {
+      order: 1;
+      width: auto;
+      margin-top: -20rem;
+      margin-bottom: 10rem;
+    }
+  }
+
+  header nav {
+    width: 60%;
+}  
+
+.sections {
+  width: 50rem;
+  height: 50rem;
+
+  & img {
+    height: 50rem;
+  }
+}
+
+  .grid-system {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+
+
+@media (width <= 576px) {
+  html {
+    font-size: 30%;
+  }
+
+  main {
+    margin-top: 36rem;
   }
 }
